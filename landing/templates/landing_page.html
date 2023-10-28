@@ -8,7 +8,7 @@
 
 </head>
 
-<body class="bg-cover bg-no-repeat" style="font-family: {% for f in h.general_font.all %}'{{ f.family_name }}', {{ f.serif_type }}{% endfor %};font-size: {{ h.general_font_size }}; background-image: url({{ h.image.url }});">
+<body class="bg-cover bg-no-repeat vh-100" style="font-family: {% for f in h.general_font.all %}'{{ f.family_name }}', {{ f.serif_type }}{% endfor %};font-size: {{ h.general_font_size }}; background-image: url({{ h.image.url }});">
 
     {% block body %}
         {% include 'layout/content.html'%}
