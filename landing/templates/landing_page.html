@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% block header %} 
+        {% include 'layout/header.html'%} 
+    {% endblock %}
+
+</head>
+
+<body class="bg-light">
+
+    {% block body %}
+        {% include 'layout/content.html'%}
+    {% endblock %}
+
+    {% block social %}
+            {% include 'layout/social-menu.html'%}
+        {% endblock %}
+
+    {% block footer %}
+        {% include 'layout/footer.html'%}
+    {% endblock %}
+
+    <!-- Vendor JS -->
+    {% block venderJs %}
+        {% include 'layout/venderJs.html'%}
+    {% endblock %}
+
+</body>
+</html>
