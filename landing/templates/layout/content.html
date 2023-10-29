@@ -1,4 +1,3 @@
-<div class="d-flex flex-column align-items-center justify-content-center vh-100">
-    <h1 class="text-center text-light text-uppercase" style="font-family: {% for f in h.header_font.all %}'{{ f.family_name }}', {{ f.serif_type }}{% endfor %};font-size: {{ h.title_font_size }};font-weight: {{ h.title_font_weight }}">{{ h.title }}</h1>
-    <h3 class="text-center text-light text-uppercase" style="font-family: {% for f in h.header_font.all %}'{{ f.family_name }}', {{ f.serif_type }}{% endfor %};font-size: {{ h.sub_title_font_size }};font-weight: {{ h.title_font_weight }};">{{ h.sub_title }}</h3>
-    <p class="text-center text-light">{{ h.cta }}{{ h.header_font.family_name }}<br></p>
+<h1 class="text-center text-light text-uppercase">{{ h.title }}</h1>
+<h3 class="text-center text-light text-uppercase">{{ h.sub_title }}</h3>
+<p class="text-center text-light">{{ h.cta }}{{ h.header_font.family_name }}<br></p>

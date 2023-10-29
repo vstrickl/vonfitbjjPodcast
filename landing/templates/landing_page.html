@@ -1,22 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-color">
 
 <head>
     {% block header %} 
         {% include 'layout/header.html'%} 
     {% endblock %}
 
+    <style>
+        h1, h2, h3, h4, h5, h6 {
+            font-family: {% for f in h.header_font.all %}'{{ f.family_name }}', {{ f.serif_type }}{% endfor %};
+        }
+
+        h1 {
+            font-size: {{ h.title_font_size }};
+        }
+
+        h1 {
+            font-weight: {{ h.title_font_weight }};
+        }
+
+        h3 {
+            font-size: {{ h.sub_title_font_size }};
+        }
+
+        h3 {
+            font-weight: {{ h.title_font_weight }};
+        }
+
+        p {
+            font-family: {% for f in h.general_font.all %}'{{ f.family_name }}', {{ f.serif_type }}{% endfor %};
+        }
+
+        p {
+            font-size: {{ h.general_font_size }};
+        }
+
+        i {
+            color: #ffffff;
+        }
+
+        i {
+            font-size: 4rem;
+        }
+
+        .bg-img {
+            background-image: url({{ h.image.url }});
+        }
+
+    </style>
+
 </head>
 
-<body class="bg-cover bg-no-repeat vh-100" style="font-family: {% for f in h.general_font.all %}'{{ f.family_name }}', {{ f.serif_type }}{% endfor %};font-size: {{ h.general_font_size }}; background-image: url({{ h.image.url }});">
+<body class="bg-color">
 
-    {% block body %}
-        {% include 'layout/content.html'%}
-    {% endblock %}
+    <div class="d-flex flex-column align-items-center justify-content-center vh-100 bg-img bg-cover bg-no-repeat">
+        
+        {% block body %}
+            {% include 'layout/content.html'%}
+        {% endblock %}
 
-    {% block social %}
+        {% block social %}
             {% include 'layout/social-menu.html'%}
         {% endblock %}
+
+    </div>
 
     {% block footer %}
         {% include 'layout/footer.html'%}

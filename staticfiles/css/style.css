@@ -1,3 +1,7 @@
+.bg-color {
+    background-color: #050737;
+}
+
 .bg-cover {
     /* Make the background image cover the entire div */
     background-size: cover;
@@ -8,7 +12,10 @@
     background-repeat: no-repeat;
 }
 
-.my-2x {
+.mt-2x {
     margin-top: 20%!important;
+}
+
+.mb-2x {
     margin-bottom: 20%!important;
 }
